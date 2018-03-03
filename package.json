@@ -1,0 +1,24 @@
+{
+  "name": "example-create-react-app-express",
+  "version": "1.0.0",
+  "nodemonConfig": {
+    "ignore": [
+      "*.json"
+    ]
+  },
+  "scripts": {
+    "client": "cd client && yarn start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "get-json": "^1.0.0",
+    "jsonfile": "^4.0.0",
+    "ws": "^4.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1"
+  }
+}
